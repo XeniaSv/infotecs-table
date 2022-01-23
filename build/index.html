@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <meta name="author" content="Xenia">
+    <meta name="description" content="Table with sort option and hiding column">
+    <meta name="keywords" content="table, sort column table, hidinig column table">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header><button class="show-column">Показать скрытые колонки</button></header>
+    <main>
+        <div class="main-container">
+            <table class="table">
+                <tbody id="table-body">
+                    <tr aria-rowindex="0">
+                        <th aria-colindex="0" aria-sort="none" aria-hidden="false" class="column"><span class="tittle">Имя</span>  <span class="close">&#10006;</span></th>
+                        <th aria-colindex="1" aria-sort="none" aria-hidden="false" class="column"><span class="tittle">Фамилия</span> <span class="close">&#10006;</span></th>
+                        <th aria-colindex="2" aria-sort="none" aria-hidden="false" class="column"><span class="tittle">Описание</span> <span class="close">&#10006;</span></th>
+                        <th aria-colindex="3" aria-sort="none" aria-hidden="false" class="column"><span class="tittle">Цвет глаз</span> <span class="close">&#10006;</span></th>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="redactor" class="redactor">
+                <h4 class="header">Редактировать</h4>
+                <button class="close-button">Закрыть</button>
+                <form action="" class="">
+                    <p class="red-container">
+                        <label for="">Имя:</label>
+                        <input class = 'input-field' id="name-input" type="text">
+                    </p>
+                    <p class="red-container">
+                        <label for="">Фамилия:</label>
+                        <input class = 'input-field' id="surname-input" type="text">
+                    </p>
+                    <p class="red-container">
+                        <label for="">Описание:</label>
+                        <textarea class = 'input-field' id="description-input" rows="3" name="text"></textarea>
+                    </p>    
+                       
+                    <p class="red-container">  
+                        <label for="">Цвет глаз:</label>
+                        <select class = 'input-field' id="color-input">
+                            <option selected disabled>Выберите цвет</option>
+                            <option value="brown">Карий</option>
+                            <option value="blue">Голубой</option>
+                            <option value="green">Зелёный</option>
+                            <option value="red">Красный</option>
+                        </select>
+                    </p>
+                </form>
+                <button class="save-button">Сохранить</button>
+         
+            </div>
+        </div>
+    </main>
+    <template id="template-row">
+        <tr class="row">
+            <td aria-colindex="0" aria-hidden="false" class="indicators name-cell"></td>
+            <td aria-colindex="1" aria-hidden="false" class="indicators lastname-cell"></td>
+            <td aria-colindex="2" aria-hidden="false" class="indicators about-cell"><p class="about"></p></td>
+            <td aria-colindex="3" aria-hidden="false" class="indicators color-cell"><div class="icon"></div></td>
+        </tr> 
+    </template>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
